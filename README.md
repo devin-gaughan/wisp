@@ -2,6 +2,8 @@
 
 **A browser event display for liquid argon TPC (time projection chamber) neutrino data.** Formerly NuView.
 
+**Write-up:** [Wisp: a neutrino event display in one HTML file](https://devingaughan.com/writing/wisp-neutrino-event-display.html)
+
 Wisp starts with the MicroBooNE public samples. It is part of the Auraeon project family: interactive visualizations of physical systems.
 
 Existing LArTPC event displays are desktop applications tied to the ROOT / LArSoft software stack. Wisp takes the opposite approach: a single HTML file with zero dependencies that runs in any browser, fed by a small Python script that converts open-data HDF5 events to JSON. No framework installs, no experiment credentials. Anyone can inspect real simulated neutrino interactions in under five minutes.
