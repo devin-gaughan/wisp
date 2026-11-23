@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>NuView — LArTPC Event Display</title>
+<title>Wisp — LArTPC Event Display</title>
 <style>
   body { background:#0A0514; color:#F5F1E8; font-family:system-ui,sans-serif;
          margin:0; padding:16px; }
@@ -26,7 +26,7 @@
 </style>
 </head>
 <body>
-<h1>NUVIEW · LArTPC EVENT DISPLAY</h1>
+<h1>WISP · LArTPC EVENT DISPLAY</h1>
 <div id="meta">Load an event JSON produced by extract_event.py</div>
 <div id="drop">Drop event JSON files here or <input type="file" id="file" accept=".json" multiple></div>
 <div id="bar">
@@ -343,13 +343,13 @@ document.getElementById("bPng").onclick = () => {
   const ctx = out.getContext("2d");
   ctx.fillStyle = "#0A0514"; ctx.fillRect(0, 0, w, h);
   ctx.fillStyle = "#F5F1E8"; ctx.font = `${13 * dpr}px system-ui`;
-  ctx.fillText("NuView · " + document.getElementById("meta").textContent,
+  ctx.fillText("Wisp · " + document.getElementById("meta").textContent,
                10 * dpr, 22 * dpr);
   let y = header;
   for (const c of src) { ctx.drawImage(c, 0, y); y += c.height + 8 * dpr; }
   const a = document.createElement("a");
   const m = window._last.meta;
-  a.download = `nuview_ev${m.event_index}_${viewMode}_${colorMode}.png`;
+  a.download = `wisp_ev${m.event_index}_${viewMode}_${colorMode}.png`;
   a.href = out.toDataURL("image/png");
   a.click();
 };
